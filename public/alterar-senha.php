@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-require dirname(__DIR__) . '/config/admin_auth.php';
+require __DIR__ . '/_internal/admin_auth.php';
 $user = sc_require_admin();
 if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !sc_valid_csrf()) { http_response_code(400); exit('Solicitação inválida.'); }
 $atual = (string)($_POST['atual'] ?? '');

@@ -6,7 +6,7 @@ if (isset($_SERVER['SCRIPT_FILENAME']) && realpath((string) $_SERVER['SCRIPT_FIL
     http_response_code(404);
     exit;
 }
-function sc_db(): PDO { return require dirname(__DIR__) . '/config/database.php'; }
+function sc_db(): PDO { return require dirname(__DIR__, 2) . '/config/database.php'; }
 function sc_session(): void {
     if (session_status() === PHP_SESSION_ACTIVE) return;
     if (!headers_sent()) {

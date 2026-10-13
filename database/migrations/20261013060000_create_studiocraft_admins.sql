@@ -1,0 +1,16 @@
+CREATE TABLE sc_admins (
+ id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+ usuario VARCHAR(40) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL,
+ senha_hash VARCHAR(255) CHARACTER SET ascii COLLATE ascii_bin NOT NULL,
+ senha_troca_obrigatoria TINYINT(1) NOT NULL DEFAULT 1,
+ ativo TINYINT(1) NOT NULL DEFAULT 1,
+ tentativas_falhas INT UNSIGNED NOT NULL DEFAULT 0,
+ bloqueado_ate DATETIME(6) DEFAULT NULL,
+ ultimo_login_em DATETIME(6) DEFAULT NULL,
+ created_at DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+ updated_at DATETIME(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
+ PRIMARY KEY (id),
+ UNIQUE KEY uq_sc_admins_usuario (usuario),
+ CONSTRAINT chk_sc_admins_usuario CHECK (CHAR_LENGTH(usuario) BETWEEN 3 AND 40),
+ CONSTRAINT chk_sc_admins_hash CHECK (CHAR_LENGTH(senha_hash) BETWEEN 60 AND 255)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

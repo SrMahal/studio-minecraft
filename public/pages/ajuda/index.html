@@ -3,92 +3,49 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0a0d0b">
-  <meta name="description" content="Aprenda a usar Alt + Tab no Minecraft Java sem abrir o menu de pausa. Guia de multitarefa Studio Minecraft.">
-  <title>Alt + Tab no Minecraft — Ajuda | Servidor Mahal</title>
-  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <meta name="theme-color" content="#181818">
+  <meta name="description" content="Configure F3 + P no Minecraft Java e use jogo e ChatGPT lado a lado. Tutorial por etapas.">
+  <title>Alt + Tab sem Game Menu | Studio Minecraft</title>
+  <link rel="icon" href="../../assets/img/threeebs-symbol.png" type="image/png">
+  <link rel="stylesheet" href="../../assets/css/threeebs-tokens.css?v=2">
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=2">
+  <script src="../../assets/js/app.js?v=2" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
   <header class="site-header">
-    <a class="brand" href="../../"><span class="brand-mark"></span><span>Servidor Mahal</span></a>
+    <a class="brand" href="../../"><img src="../../assets/img/threeebs-symbol.png" alt="" width="32" height="32"><span>Studio Minecraft<small>por Threeebs!</small></span></a>
     <nav class="nav" aria-label="Navegação principal">
       <a href="../../">Início</a>
-      <a href="../mods/">Mods</a>
-      <a href="../../#conectar">Conectar</a>
-      <a class="active" href="./" aria-current="page">Ajuda</a>
+      <a href="../../pages/mods/">Mods</a>
+      <a href="../../pages/ajuda/" aria-current="page">Ajuda</a>
     </nav>
   </header>
-  <main>
-    <section class="subhero">
-      <a class="back" href="../../">← Voltar ao início</a>
-      <p class="eyebrow">AJUDA • MINECRAFT JAVA</p>
-      <h1>Jogue e navegue.<br><span>Sem abrir o menu.</span></h1>
-      <p>Quer consultar o ChatGPT ou trocar de janela sem interromper a visualização do jogo? Configure a pausa ao perder foco e use o Windows lado a lado.</p>
-      <a class="btn primary" href="#passos">Ver passo a passo ↓</a>
-    </section>
-
-    <section class="section" id="passos">
-      <div class="section-title"><span>01</span><div><p>CONFIGURAÇÃO</p><h2>Ative em 3 passos.</h2></div></div>
-      <div class="steps">
-        <article><span>1</span><h3>Entre no mundo</h3><p>Abra o Minecraft Java e conecte-se ao servidor ou ao seu mundo.</p></article>
-        <article><span>2</span><h3>Pressione <kbd>F3</kbd> + <kbd>P</kbd></h3><p>Desative a opção <strong>Pause on lost focus</strong>. A mensagem esperada é <code>disabled</code>.</p></article>
-        <article><span>3</span><h3>Troque de janela</h3><p>Volte ao jogo com <kbd>Esc</kbd> se o menu já estiver aberto. Em seguida use <kbd>Alt</kbd> + <kbd>Tab</kbd>.</p></article>
-      </div>
-      <div class="notice"><strong>Importante: esse atalho não dá controle simultâneo das duas janelas.</strong><p>O Minecraft pode continuar rodando enquanto você digita no navegador, mas o teclado e o mouse passam a controlar o aplicativo em foco. Em servidores multiplayer, o mundo continua funcionando independentemente da pausa local.</p></div>
-    </section>
-
-    <section class="section">
-      <div class="section-title"><span>02</span><div><p>TESTE GUIADO</p><h2>Confira sua configuração.</h2></div></div>
-      <div class="helper-layout">
-        <div class="mini-card">
-          <span class="label required">ATALHO PRINCIPAL</span>
-          <div class="key-demo"><kbd>F3</kbd><span>+</span><kbd>P</kbd></div>
-          <p>Esse comando alterna a pausa ao perder o foco. Se aparecer <code>enabled</code>, pressione de novo para chegar a <code>disabled</code>.</p>
-          <p>Em alguns notebooks, use <kbd>Fn</kbd> + <kbd>F3</kbd> + <kbd>P</kbd>.</p>
-        </div>
-        <div class="mini-card">
-          <span class="label">WINDOWS</span>
-          <div class="key-demo"><kbd>Alt</kbd><span>+</span><kbd>Tab</kbd></div>
-          <p>Com o jogo em modo janela, pressione <kbd>Win</kbd> + <kbd>←</kbd> ou <kbd>Win</kbd> + <kbd>→</kbd> para encaixá-lo em metade da tela. Depois selecione o navegador para a outra metade.</p>
-          <p>Se o jogo minimizar, teste o modo janela em vez da tela cheia exclusiva.</p>
-        </div>
-      </div>
-      <div class="check-panel" id="checklist">
-        <div><p class="eyebrow">CHECKLIST INTERATIVO</p><h3>Pronto para multitarefa?</h3><p>Marque os itens conforme testar no seu computador.</p></div>
-        <div class="checklist">
-          <label><input type="checkbox" data-help-check> Estou jogando Minecraft Java</label>
-          <label><input type="checkbox" data-help-check> Apareceu “Pause on lost focus: disabled”</label>
-          <label><input type="checkbox" data-help-check> Fechei o Game Menu com Esc</label>
-          <label><input type="checkbox" data-help-check> Alt + Tab alternou para o navegador</label>
-          <p id="help-progress" class="help-progress" role="status" aria-live="polite">0 de 4 concluídos</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-title"><span>03</span><div><p>PROBLEMAS COMUNS</p><h2>Se ainda não funcionar.</h2></div></div>
-      <div class="faq">
-        <details><summary>O Game Menu continua aparecendo.</summary><p>Confira se a mensagem após <kbd>F3</kbd> + <kbd>P</kbd> mostra <code>disabled</code>. Se o menu já estava aberto, feche com <kbd>Esc</kbd> antes de mudar de janela.</p></details>
-        <details><summary>F3 + P não funciona no meu notebook.</summary><p>Tente <kbd>Fn</kbd> + <kbd>F3</kbd> + <kbd>P</kbd>. Algumas teclas de função controlam brilho e volume por padrão.</p></details>
-        <details><summary>O Minecraft minimiza quando aperto Alt + Tab.</summary><p>Saia da tela cheia exclusiva e use o modo janela. A alteração de pausa não impede, por si só, que o Windows minimize um aplicativo em tela cheia.</p></details>
-        <details><summary>Posso andar no jogo enquanto escrevo no ChatGPT?</summary><p>Não com esse atalho. O teclado controla a janela em foco; movimentação sem foco exigiria soluções externas específicas e cuidados com as regras do servidor.</p></details>
-        <details><summary>Isso funciona no Bedrock Edition?</summary><p>Este tutorial é voltado ao Minecraft Java Edition. Atalhos e configurações do Bedrock podem ser diferentes.</p></details>
-      </div>
-    </section>
-    <section class="cta small"><p>PRONTO PARA JOGAR?</p><h2>Volte para o mundo.</h2><a class="btn ghost help-cta" href="../../#conectar">Como conectar ao servidor</a></section>
+  <main class="journey" id="conteudo" tabindex="-1" data-journey>
+    <nav class="step-nav" aria-label="Seções desta página"><ol><li><a href="#inicio" data-step-link><span class="step-number">1</span><span class="step-name">Começar</span></a></li><li><a href="#passos" data-step-link><span class="step-number">2</span><span class="step-name">Configurar</span></a></li><li><a href="#trocar" data-step-link><span class="step-number">3</span><span class="step-name">Alternar</span></a></li><li><a href="#janelas" data-step-link><span class="step-number">4</span><span class="step-name">Janelas</span></a></li><li><a href="#checklist" data-step-link><span class="step-number">5</span><span class="step-name">Conferir</span></a></li><li><a href="#problemas" data-step-link><span class="step-number">6</span><span class="step-name">Ajuda</span></a></li></ol></nav>
+    <div class="panels"><section class="panel" id="inicio" aria-labelledby="inicio-title"><div class="panel-heading"><p class="eyebrow">Minecraft Java · Multitarefa</p><h1 id="inicio-title" tabindex="-1">Seu jogo.<br><span>Seu ritmo.</span></h1><p class="intro">Consulte o ChatGPT enquanto acompanha o Minecraft. Vamos configurar o jogo e testar a troca de janelas.</p></div>
+<div class="shortcut"><kbd>F3</kbd><span>+</span><kbd>P</kbd><span class="shortcut-divider" aria-hidden="true"></span><kbd>Alt</kbd><span>+</span><kbd>Tab</kbd></div>
+<div class="note"><span class="note-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><div><strong>Um aplicativo em foco por vez.</strong><p>O teclado e o mouse controlam a janela selecionada. Este guia é para Minecraft Java.</p></div></div></section>
+<section class="panel" id="passos" aria-labelledby="passos-title"><div class="panel-heading"><p class="eyebrow">01 · Pausa ao perder foco</p><h1 id="passos-title" tabindex="-1">Troque de janela.<br><span>Sem abrir o menu.</span></h1><p class="intro">Entre no mundo e, com o jogo em foco, segure F3 e pressione P.</p></div>
+<div class="shortcut"><kbd>F3</kbd><span>+</span><kbd>P</kbd></div><div class="result-card"><span class="field-label">MENSAGEM ESPERADA NO JOGO</span><code>Pause on lost focus: disabled</code></div><p class="quiet-note">Se aparecer <code>enabled</code>, repita o atalho. No notebook, pode ser necessário <kbd>Fn</kbd> + <kbd>F3</kbd> + <kbd>P</kbd>.</p></section>
+<section class="panel" id="trocar" aria-labelledby="trocar-title"><div class="panel-heading"><p class="eyebrow">02 · Alternar janelas</p><h1 id="trocar-title" tabindex="-1">Agora abra<br><span>o ChatGPT.</span></h1><p class="intro">Se o Game Menu estiver aberto, feche com Esc. Depois, use Alt + Tab para selecionar o navegador.</p></div>
+<div class="shortcut"><kbd>Alt</kbd><span>+</span><kbd>Tab</kbd></div><div class="instruction-card"><h2>Teste a troca.</h2><p>Ao voltar para o Minecraft, confira se o menu deixou de abrir automaticamente. O atalho <kbd>F3</kbd> + <kbd>P</kbd> novamente reativa a pausa.</p></div><p class="quiet-note">Em multiplayer, o mundo do servidor continua funcionando enquanto você está no navegador.</p></section>
+<section class="panel" id="janelas" aria-labelledby="janelas-title"><div class="panel-heading"><p class="eyebrow">03 · Windows lado a lado</p><h1 id="janelas-title" tabindex="-1">Uma tela.<br><span>Duas janelas.</span></h1><p class="intro">Use o Minecraft em modo janela para manter o jogo e o navegador visíveis ao mesmo tempo.</p></div>
+<div class="window-demo" aria-hidden="true"><div><span class="window-top"><i></i><i></i><i></i></span><strong>Minecraft</strong><span class="mini-world"></span></div><div><span class="window-top"><i></i><i></i><i></i></span><strong>ChatGPT</strong><span class="chat-line"></span><span class="chat-line short"></span></div></div>
+<p class="quiet-note">Com o jogo em foco, use <kbd>Win</kbd> + <kbd>←</kbd> ou <kbd>Win</kbd> + <kbd>→</kbd>. Selecione o navegador para a outra metade. Se minimizar, saia da tela cheia exclusiva.</p></section>
+<section class="panel" id="checklist" aria-labelledby="checklist-title"><div class="panel-heading"><p class="eyebrow">04 · Seu teste</p><h1 id="checklist-title" tabindex="-1">Tudo certo<br><span>por aí?</span></h1><p class="intro">Marque os passos que você confirmou no seu computador.</p></div>
+<div class="checklist" data-checklist><label><input type="checkbox"> Estou no Minecraft Java</label><label><input type="checkbox"> A mensagem apareceu como “disabled”</label><label><input type="checkbox"> Fechei o Game Menu com Esc</label><label><input type="checkbox"> Alt + Tab abriu o navegador</label><p class="check-progress" role="status" aria-live="polite"></p></div></section>
+<section class="panel" id="problemas" aria-labelledby="problemas-title"><div class="panel-heading"><p class="eyebrow">05 · Se precisar de ajuda</p><h1 id="problemas-title" tabindex="-1">Ajustes pequenos.<br><span>Jogo tranquilo.</span></h1><p class="intro">Abra a dúvida que combina com o seu teste.</p></div>
+<div class="faq"><details><summary>O Game Menu continua aparecendo</summary><p>Confira se <kbd>F3</kbd> + <kbd>P</kbd> mostra <code>disabled</code>. Feche o menu com <kbd>Esc</kbd> antes de alternar.</p></details><details><summary>F3 + P não funciona no notebook</summary><p>Tente <kbd>Fn</kbd> + <kbd>F3</kbd> + <kbd>P</kbd>. As teclas de função podem estar configuradas para brilho ou volume.</p></details><details><summary>O jogo minimiza ao trocar de janela</summary><p>Use o modo janela. Desativar a pausa não altera o comportamento da tela cheia exclusiva.</p></details><details><summary>Posso andar enquanto digito no ChatGPT?</summary><p>Esse atalho não mantém o controle do personagem sem foco. O teclado controla o aplicativo selecionado.</p></details><details><summary>Funciona no Minecraft Bedrock?</summary><p>Este guia usa atalhos do Minecraft Java. No Bedrock, as configurações são diferentes.</p></details></div></section></div>
+    <nav class="journey-controls" aria-label="Navegação entre seções">
+      <a class="button secondary" href="../../" data-previous>← Início</a>
+      <p class="step-counter" data-step-counter>Uma seção por vez</p>
+      <a class="button primary" href="#passos" data-next data-end-href="../../#conectar" data-end-label="Conectar ao servidor">Próxima seção <span aria-hidden="true">→</span></a>
+    </nav>
+    <p class="sr-only" role="status" aria-live="polite" data-step-status></p>
+    <noscript><p class="quiet-note">Use os números no topo para ir até cada seção.</p></noscript>
   </main>
-  <footer><span>Servidor Mahal</span><span>Ajuda • Minecraft Java • Alt + Tab</span></footer>
-  <script>
-    (() => {
-      const items = document.querySelectorAll('[data-help-check]');
-      const progress = document.getElementById('help-progress');
-      const update = () => {
-        const total = [...items].filter(item => item.checked).length;
-        progress.textContent = total === items.length ? 'Tudo pronto! Pode alternar as janelas.' : total + ' de ' + items.length + ' concluídos';
-      };
-      items.forEach(item => item.addEventListener('change', update));
-      update();
-    })();
-  </script>
+  <footer class="site-footer"><span>Servidor Mahal · Minecraft Java 26.2</span><a href="https://identidade.3eb.site/" target="_blank" rel="noopener noreferrer">Identidade Threeebs! <span aria-hidden="true">↗</span></a></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>

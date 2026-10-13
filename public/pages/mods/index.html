@@ -3,84 +3,48 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#0a0d0b">
-  <title>Mods — Servidor Mahal</title>
-  <meta name="description" content="Mods necessários e recomendados para jogar no Servidor Mahal.">
-  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <meta name="theme-color" content="#181818">
+  <meta name="description" content="Instale o Simple Voice Chat no Minecraft Java, um passo de cada vez.">
+  <title>Instale o mod de voz | Studio Minecraft</title>
+  <link rel="icon" href="../../assets/img/threeebs-symbol.png" type="image/png">
+  <link rel="stylesheet" href="../../assets/css/threeebs-tokens.css?v=2">
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=2">
+  <script src="../../assets/js/app.js?v=2" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
   <header class="site-header">
-    <a class="brand" href="../../"><span class="brand-mark"></span><span>Servidor Mahal</span></a>
-    <nav class="nav">
-      <a href="../../">Início</a><a class="active" href="./">Mods</a><a href="../../#conectar">Conectar</a><a href="../ajuda/">Ajuda</a>
+    <a class="brand" href="../../"><img src="../../assets/img/threeebs-symbol.png" alt="" width="32" height="32"><span>Studio Minecraft<small>por Threeebs!</small></span></a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="../../">Início</a>
+      <a href="../../pages/mods/" aria-current="page">Mods</a>
+      <a href="../../pages/ajuda/">Ajuda</a>
     </nav>
   </header>
-
-  <main>
-    <section class="subhero">
-      <a class="back" href="../../">← Voltar ao início</a>
-      <p class="eyebrow">MODS DO SERVIDOR</p>
-      <h1>Baixe somente<br><span>o que você precisa.</span></h1>
-      <p>Esta página reúne os mods usados pelos jogadores do Servidor Mahal. Confira sempre a versão indicada antes de instalar.</p>
-    </section>
-
-    <section class="section mods-page">
-      <div class="section-title"><span>01</span><div><p>OBRIGATÓRIO PARA VOZ</p><h2>Mods para o cliente.</h2></div></div>
-
-      <article class="mod-card featured">
-        <div class="mod-icon">🎙️</div>
-        <div class="mod-main">
-          <div class="mod-meta"><span class="label required">CLIENTE</span><span class="label">FABRIC</span><span class="label">26.2</span></div>
-          <h3>Simple Voice Chat</h3>
-          <p>Adiciona comunicação por voz por proximidade. Quanto mais longe um jogador está, mais baixo ele é ouvido.</p>
-          <div class="mod-file"><small>ARQUIVO</small><code>voicechat-fabric-2.6.21+26.2.jar</code></div>
-          <div class="mod-actions">
-            <a class="btn primary" href="https://modrinth.com/plugin/simple-voice-chat/version/fabric-2.6.21%2B26.2" target="_blank" rel="noopener noreferrer">Baixar no Modrinth ↗</a>
-            <a class="btn ghost" href="#instalar">Como instalar</a>
-          </div>
-        </div>
-      </article>
-
-      <div class="notice"><strong>Sem esse mod você ainda consegue entrar no servidor.</strong><p>Você apenas não terá acesso à comunicação por voz.</p></div>
-    </section>
-
-    <section class="section" id="instalar">
-      <div class="section-title"><span>02</span><div><p>INSTALAÇÃO</p><h2>Simple Voice Chat no Windows.</h2></div></div>
-      <div class="install-grid">
-        <article><span>1</span><h3>Use Fabric 26.2</h3><p>Inicie o Minecraft com um perfil Fabric compatível com a versão 26.2.</p></article>
-        <article><span>2</span><h3>Abra a pasta mods</h3><p>Normalmente ela fica em:</p><div class="inline-address"><code>%appdata%\.minecraft\mods</code><button data-copy="%appdata%\.minecraft\mods">Copiar</button></div></article>
-        <article><span>3</span><h3>Coloque o .jar</h3><p>Mova o arquivo baixado para a pasta <code>mods</code> e reinicie o jogo.</p></article>
-        <article><span>4</span><h3>Configure o áudio</h3><p>Entre no servidor e pressione <kbd>V</kbd> para abrir o Simple Voice Chat.</p></article>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="section-title"><span>03</span><div><p>PLUGIN DO SERVIDOR</p><h2>Não precisa instalar.</h2></div></div>
-      <article class="mod-card">
-        <div class="mod-icon">🪓</div>
-        <div class="mod-main">
-          <div class="mod-meta"><span class="label server">SERVIDOR</span></div>
-          <h3>UltimateTimber</h3>
-          <p>O plugin que facilita o corte de árvores já roda no Paper do servidor. Nenhum arquivo é necessário no Minecraft do jogador.</p>
-        </div>
-      </article>
-    </section>
-
-    <section class="section checklist-section">
-      <div><p class="eyebrow">CHECKLIST</p><h2>Pronto para jogar?</h2></div>
-      <div class="checklist">
-        <label><input type="checkbox"> Minecraft Java 26.2</label>
-        <label><input type="checkbox"> Fabric Loader 26.2</label>
-        <label><input type="checkbox"> Simple Voice Chat instalado</label>
-        <label><input type="checkbox"> Microfone configurado</label>
-      </div>
-    </section>
-
-    <section class="cta small"><p>SERVIDOR</p><h2>minecraft-server.mahal.pro</h2><button data-copy="minecraft-server.mahal.pro">Copiar endereço</button></section>
+  <main class="journey" id="conteudo" tabindex="-1" data-journey>
+    <nav class="step-nav" aria-label="Seções desta página"><ol><li><a href="#mods" data-step-link><span class="step-number">1</span><span class="step-name">O mod</span></a></li><li><a href="#instalar" data-step-link><span class="step-number">2</span><span class="step-name">Fabric</span></a></li><li><a href="#pasta" data-step-link><span class="step-number">3</span><span class="step-name">Pasta</span></a></li><li><a href="#arquivo" data-step-link><span class="step-number">4</span><span class="step-name">Arquivo</span></a></li><li><a href="#audio" data-step-link><span class="step-number">5</span><span class="step-name">Áudio</span></a></li><li><a href="#checklist" data-step-link><span class="step-number">6</span><span class="step-name">Concluir</span></a></li></ol></nav>
+    <div class="panels"><section class="panel" id="mods" aria-labelledby="mods-title"><div class="panel-heading"><p class="eyebrow">Mods do cliente</p><h1 id="mods-title" tabindex="-1">Apenas o necessário.<br><span>Vamos instalar?</span></h1><p class="intro">O Simple Voice Chat adiciona voz por proximidade. Sem ele você pode jogar, mas não ouvir nem falar pelo mod.</p></div>
+<article class="feature-card"><div class="feature-symbol" aria-hidden="true">V</div><div><span class="field-label">FABRIC · JAVA 26.2</span><h2>Simple Voice Chat</h2><p><code>voicechat-fabric-2.6.21+26.2.jar</code></p></div></article>
+<a class="button primary download" href="https://modrinth.com/plugin/simple-voice-chat/version/fabric-2.6.21%2B26.2" target="_blank" rel="noopener noreferrer">Baixar no Modrinth <span aria-hidden="true">↗</span></a></section>
+<section class="panel" id="instalar" aria-labelledby="instalar-title"><div class="panel-heading"><p class="eyebrow">01 · Perfil do jogo</p><h1 id="instalar-title" tabindex="-1">Comece pelo<br><span>perfil Fabric.</span></h1><p class="intro">No seu launcher, selecione um perfil Fabric compatível com o Minecraft Java 26.2.</p></div>
+<div class="instruction-card"><span class="field-label">ANTES DE CONTINUAR</span><h2>Confira a versão.</h2><p>O jogo, o perfil Fabric e o arquivo do mod precisam ser compatíveis entre si.</p></div><p class="quiet-note">Depois de conferir o perfil, feche o jogo para adicionar o mod.</p></section>
+<section class="panel" id="pasta" aria-labelledby="pasta-title"><div class="panel-heading"><p class="eyebrow">02 · Windows</p><h1 id="pasta-title" tabindex="-1">Abra a<br><span>pasta mods.</span></h1><p class="intro">Pressione Win + R no Windows, cole o caminho abaixo e confirme com Enter.</p></div>
+<div class="address-card"><span class="field-label">CAMINHO NO WINDOWS</span><div class="copy-row"><code>%appdata%\.minecraft\mods</code><button class="button primary" type="button" data-copy="%appdata%\.minecraft\mods">Copiar caminho</button></div></div><p class="quiet-note">Se o launcher usa uma pasta própria para o perfil, abra a pasta <code>mods</code> desse perfil. Crie a pasta se ela ainda não existir.</p></section>
+<section class="panel" id="arquivo" aria-labelledby="arquivo-title"><div class="panel-heading"><p class="eyebrow">03 · Arquivo do mod</p><h1 id="arquivo-title" tabindex="-1">Coloque o arquivo.<br><span>Reabra o jogo.</span></h1><p class="intro">Mova o arquivo .jar baixado para a pasta mods. Depois, inicie o Minecraft pelo perfil Fabric.</p></div>
+<div class="instruction-card"><span class="field-label">ARQUIVO ESPERADO</span><h2 class="file-name">voicechat-fabric-2.6.21+26.2.jar</h2><p>Mantenha o arquivo no formato <code>.jar</code>, sem descompactar.</p></div></section>
+<section class="panel" id="audio" aria-labelledby="audio-title"><div class="panel-heading"><p class="eyebrow">04 · Configuração de áudio</p><h1 id="audio-title" tabindex="-1">Teste sua voz.<br><span>Encontre o grupo.</span></h1><p class="intro">Entre no Servidor Mahal e pressione V para abrir as configurações do Simple Voice Chat.</p></div>
+<div class="shortcut"><kbd>V</kbd><span class="key-caption">Abrir o mod de voz</span></div><div class="instruction-card"><h2>Escolha seu microfone.</h2><p>Confira a entrada e a saída de áudio, ajuste o volume e teste a comunicação perto de outro jogador.</p></div></section>
+<section class="panel" id="checklist" aria-labelledby="checklist-title"><div class="panel-heading"><p class="eyebrow">Tudo preparado</p><h1 id="checklist-title" tabindex="-1">Pronto para<br><span>jogar junto?</span></h1><p class="intro">Confira o que você já fez. Este checklist acompanha sua instalação.</p></div>
+<div class="checklist" data-checklist><label><input type="checkbox"> Minecraft Java 26.2</label><label><input type="checkbox"> Perfil Fabric compatível</label><label><input type="checkbox"> Simple Voice Chat na pasta mods</label><label><input type="checkbox"> Microfone e áudio configurados</label><p class="check-progress" role="status" aria-live="polite"></p></div><p class="quiet-note">O UltimateTimber já roda no servidor Paper. Nenhum download é necessário para esse plugin.</p></section></div>
+    <nav class="journey-controls" aria-label="Navegação entre seções">
+      <a class="button secondary" href="../../" data-previous>← Início</a>
+      <p class="step-counter" data-step-counter>Uma seção por vez</p>
+      <a class="button primary" href="#instalar" data-next data-end-href="../../#conectar" data-end-label="Conectar ao servidor">Próxima seção <span aria-hidden="true">→</span></a>
+    </nav>
+    <p class="sr-only" role="status" aria-live="polite" data-step-status></p>
+    <noscript><p class="quiet-note">Use os números no topo para ir até cada seção.</p></noscript>
   </main>
-
-  <footer><span>Servidor Mahal</span><span>Mods para Minecraft 26.2</span></footer>
-  <div id="toast" class="toast">Copiado</div>
-  <script src="../../assets/js/app.js"></script>
+  <footer class="site-footer"><span>Servidor Mahal · Minecraft Java 26.2</span><a href="https://identidade.3eb.site/" target="_blank" rel="noopener noreferrer">Identidade Threeebs! <span aria-hidden="true">↗</span></a></footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
 </body>
 </html>

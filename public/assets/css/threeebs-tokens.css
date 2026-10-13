@@ -1,0 +1,91 @@
+:root {
+  color-scheme: dark;
+
+  --3eb-mint-100: #d8fff5;
+  --3eb-mint-300: #82f5d9;
+  --3eb-mint-500: #34af90;
+  --3eb-mint-700: #139171;
+  --3eb-mint-900: #053d33;
+
+  --3eb-ink-950: #050b0d;
+  --3eb-ink-900: #181818;
+  --3eb-ink-850: #0a1414;
+  --3eb-ink-800: #0e1a18;
+  --3eb-ink-700: #132420;
+  --3eb-ink-600: #1d332e;
+
+  --3eb-cloud-50: #f7faf9;
+  --3eb-cloud-100: #edf3f1;
+  --3eb-cloud-300: #bdcbc7;
+  --3eb-cloud-500: #849c96;
+  --3eb-cloud-700: #4a5d58;
+
+  --3eb-red-500: #ef6b72;
+  --3eb-amber-500: #e7bd63;
+  --3eb-blue-500: #55d9ef;
+
+  --3eb-space-1: .25rem;
+  --3eb-space-2: .5rem;
+  --3eb-space-3: .75rem;
+  --3eb-space-4: 1rem;
+  --3eb-space-6: 1.5rem;
+  --3eb-space-8: 2rem;
+  --3eb-space-12: 3rem;
+  --3eb-space-16: 4rem;
+
+  --3eb-radius-sm: .5rem;
+  --3eb-radius-md: .875rem;
+  --3eb-radius-lg: 1.375rem;
+  --3eb-radius-pill: 999px;
+
+  --3eb-font-display: "Space Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
+  --3eb-font-body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --3eb-font-code: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+
+  --3eb-duration-fast: 120ms;
+  --3eb-duration-base: 220ms;
+  --3eb-duration-slow: 420ms;
+  --3eb-ease-standard: cubic-bezier(.2, .8, .2, 1);
+
+  --3eb-bg-canvas: var(--3eb-ink-900);
+  --3eb-bg-surface: var(--3eb-ink-800);
+  --3eb-bg-surface-raised: var(--3eb-ink-700);
+  --3eb-bg-subtle: color-mix(in srgb, var(--3eb-mint-500) 6%, var(--3eb-bg-surface));
+  --3eb-text-primary: var(--3eb-cloud-50);
+  --3eb-text-secondary: var(--3eb-cloud-300);
+  --3eb-text-muted: var(--3eb-cloud-500);
+  --3eb-action-primary: var(--3eb-mint-500);
+  --3eb-action-primary-hover: var(--3eb-mint-300);
+  --3eb-action-on-primary: var(--3eb-ink-950);
+  --3eb-border-subtle: color-mix(in srgb, var(--3eb-mint-300) 14%, transparent);
+  --3eb-border-strong: color-mix(in srgb, var(--3eb-mint-300) 35%, transparent);
+  --3eb-focus-ring: color-mix(in srgb, var(--3eb-mint-500) 34%, transparent);
+  --3eb-shadow-sm: 0 8px 30px rgb(0 0 0 / 18%);
+  --3eb-shadow-lg: 0 28px 90px rgb(0 0 0 / 34%);
+}
+
+[data-theme="light"] {
+  color-scheme: light;
+  --3eb-bg-canvas: #f3f7f6;
+  --3eb-bg-surface: #ffffff;
+  --3eb-bg-surface-raised: #edf3f1;
+  --3eb-bg-subtle: #e7f6f2;
+  --3eb-text-primary: #11201d;
+  --3eb-text-secondary: #354c46;
+  --3eb-text-muted: #667a75;
+  --3eb-action-primary: #159d7e;
+  --3eb-action-primary-hover: #087d65;
+  --3eb-action-on-primary: #ffffff;
+  --3eb-border-subtle: rgb(14 55 46 / 14%);
+  --3eb-border-strong: rgb(14 55 46 / 30%);
+  --3eb-focus-ring: rgb(21 157 126 / 28%);
+  --3eb-shadow-sm: 0 8px 30px rgb(19 45 38 / 8%);
+  --3eb-shadow-lg: 0 28px 90px rgb(19 45 38 / 14%);
+}
+
+[data-product="admin"] { --3eb-product-accent: var(--3eb-action-primary); }
+[data-product="portal"] { --3eb-product-accent: var(--3eb-mint-500); }
+[data-product="docs"] { --3eb-product-accent: var(--3eb-blue-500); }
+[data-product="community"] { --3eb-product-accent: #b889ff; }
+
+

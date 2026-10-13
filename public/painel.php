@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-require dirname(__DIR__) . '/app/admin_auth.php';
+require dirname(__DIR__) . '/config/admin_auth.php';
 $user = sc_require_admin();
 header('Cache-Control: private, no-store');
 $csrf = sc_csrf();

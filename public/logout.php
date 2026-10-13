@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-require dirname(__DIR__) . '/app/admin_auth.php';
+require dirname(__DIR__) . '/config/admin_auth.php';
 sc_session();
 if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !sc_valid_csrf()) { http_response_code(400); exit('Solicitação inválida.'); }
 $_SESSION = [];

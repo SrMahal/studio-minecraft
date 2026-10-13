@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-require dirname(__DIR__) . '/config/admin_auth.php';
+require __DIR__ . '/_internal/admin_auth.php';
 sc_session();
 if (sc_admin() !== null) { header('Location: /painel.php'); exit; }
 header('Cache-Control: no-store');

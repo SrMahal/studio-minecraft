@@ -41,7 +41,7 @@ def validate_policy(sql):
 class SchemaContractTest(unittest.TestCase):
     def test_manifest_and_production_policy(self):
         files = sorted(MIGRATIONS.iterdir())
-        self.assertEqual(len(files), 2)
+        self.assertEqual(len(files), 3)
         for path in files:
             with self.subTest(path=path.name):
                 self.assertRegex(path.name, r'^[0-9]{14}_[a-z0-9][a-z0-9_]{0,80}\.sql$')

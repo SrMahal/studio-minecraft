@@ -83,7 +83,7 @@ def main():
         created = True
         for path in sorted((ROOT / 'database' / 'migrations').glob('*.sql')):
             execute(path.read_text())
-        equal('duas tabelas criadas', 'SELECT COUNT(*) FROM information_schema.tables WHERE table_schema=DATABASE();', '2')
+        equal('tres tabelas criadas', 'SELECT COUNT(*) FROM information_schema.tables WHERE table_schema=DATABASE();', '3')
 
         first, sql = player()
         execute(sql)

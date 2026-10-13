@@ -18,11 +18,22 @@ O checklist é mantido durante a sessão do navegador. Os botões permanecem vis
 
 Paleta e famílias tipográficas de [threeebs/threeebs-identity](https://github.com/threeebs/threeebs-identity):
 
-- `public/assets/css/threeebs-tokens.css`: cópia dos tokens de `design-system/src/tokens.css`.
+- `public/assets/css/threeebs-tokens.css`: tokens originais de `design-system/src/tokens.css`.
 - `public/assets/img/threeebs-symbol.png`: símbolo oficial de `app/public/assets/image/logo/logo-symbol-brand.png`.
 - `public/assets/css/styles.css`: layout específico do Studio Minecraft.
 
 Os ativos estão no próprio website; a apresentação não depende de carregar CSS ou imagens de outro domínio. As fontes usam as alternativas locais definidas pelos tokens oficiais.
+
+## Leitura e acessibilidade
+
+- Texto principal de 20 a 24 px na configuração padrão, com metadados a partir de 16 px. A altura da tela não reduz as fontes.
+- Controles **A− / A+** oferecem 100%, 125% e 150%. Tema e tamanho são salvos no navegador e aplicados antes da primeira pintura nas três páginas.
+- Modo claro e escuro com cores semânticas de maior contraste. Na primeira visita, o tema acompanha a preferência do sistema.
+- Ícones SVG locais acompanham rótulos de texto. Controles de leitura têm área mínima de 44 × 48 px (botões principais de 56 px de altura), foco visível e navegação por teclado.
+- A opção **Sem animações** desativa transições e movimentos de clique. A preferência de movimento reduzido do sistema sempre é respeitada.
+- As transições de seção duram 240 ms; não atrasam o foco nem a troca de conteúdo.
+- O conteúdo da seção pode rolar internamente quando houver texto ampliado, FAQ aberta ou pouco espaço. Isso mantém as letras grandes e as ações acessíveis. Em janelas com até 520 px de altura útil, ou com até 360 px de largura e texto a 150%, como ao usar zoom forte, a página permite rolagem vertical para preservar o acesso ao conteúdo.
+- `public/assets/js/preferences.js` inicializa as preferências de leitura. O site continua navegável com armazenamento bloqueado ou JavaScript desativado.
 
 ## Executar localmente
 

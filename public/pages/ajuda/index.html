@@ -7,23 +7,29 @@
   <meta name="description" content="Configure F3 + P no Minecraft Java e use jogo e ChatGPT lado a lado. Tutorial por etapas.">
   <title>Alt + Tab sem Game Menu | Studio Minecraft</title>
   <link rel="icon" href="../../assets/img/threeebs-symbol.png" type="image/png">
-  <link rel="stylesheet" href="../../assets/css/threeebs-tokens.css?v=2">
-  <link rel="stylesheet" href="../../assets/css/styles.css?v=2">
-  <script src="../../assets/js/app.js?v=2" defer></script>
+  <link rel="stylesheet" href="../../assets/css/threeebs-tokens.css?v=3">
+  <link rel="stylesheet" href="../../assets/css/styles.css?v=3">
+  <script src="../../assets/js/preferences.js?v=3"></script>
+  <script src="../../assets/js/app.js?v=3" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
   <header class="site-header">
     <a class="brand" href="../../"><img src="../../assets/img/threeebs-symbol.png" alt="" width="32" height="32"><span>Studio Minecraft<small>por Threeebs!</small></span></a>
     <nav class="nav" aria-label="Navegação principal">
-      <a href="../../">Início</a>
-      <a href="../../pages/mods/">Mods</a>
-      <a href="../../pages/ajuda/" aria-current="page">Ajuda</a>
+      <a href="../../"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></svg><span>Início</span></a>
+      <a href="../../pages/mods/"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="13" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3M8 22h8"/></svg><span>Mods</span></a>
+      <a href="../../pages/ajuda/" aria-current="page"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 0c0 2-2.5 2-2.5 4M12 17h.01"/></svg><span>Ajuda</span></a>
     </nav>
+    <div class="preferences" role="group" aria-label="Preferências de leitura" hidden data-preferences>
+      <div class="text-size-controls" role="group" aria-label="Tamanho do texto"><span class="preference-label">Texto</span><button class="preference-button" type="button" data-text-smaller aria-label="Diminuir tamanho do texto">A−</button><output data-text-size aria-live="polite" aria-label="Tamanho atual do texto">100%</output><button class="preference-button" type="button" data-text-larger aria-label="Aumentar tamanho do texto">A+</button></div>
+      <button class="preference-button" type="button" data-theme-toggle aria-label="Ativar modo claro" aria-pressed="false"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/></svg><span data-theme-label>Escuro</span></button>
+      <button class="preference-button" type="button" data-motion-toggle aria-pressed="false"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m13 2-9 12h7l-1 8 10-12h-7Z"/></svg><span data-motion-label>Animações</span></button>
+    </div>
   </header>
   <main class="journey" id="conteudo" tabindex="-1" data-journey>
-    <nav class="step-nav" aria-label="Seções desta página"><ol><li><a href="#inicio" data-step-link><span class="step-number">1</span><span class="step-name">Começar</span></a></li><li><a href="#passos" data-step-link><span class="step-number">2</span><span class="step-name">Configurar</span></a></li><li><a href="#trocar" data-step-link><span class="step-number">3</span><span class="step-name">Alternar</span></a></li><li><a href="#janelas" data-step-link><span class="step-number">4</span><span class="step-name">Janelas</span></a></li><li><a href="#checklist" data-step-link><span class="step-number">5</span><span class="step-name">Conferir</span></a></li><li><a href="#problemas" data-step-link><span class="step-number">6</span><span class="step-name">Ajuda</span></a></li></ol></nav>
-    <div class="panels"><section class="panel" id="inicio" aria-labelledby="inicio-title"><div class="panel-heading"><p class="eyebrow">Minecraft Java · Multitarefa</p><h1 id="inicio-title" tabindex="-1">Seu jogo.<br><span>Seu ritmo.</span></h1><p class="intro">Consulte o ChatGPT enquanto acompanha o Minecraft. Vamos configurar o jogo e testar a troca de janelas.</p></div>
+    <nav class="step-nav" aria-label="Seções desta página"><ol><li><a href="#inicio" data-step-link aria-label="Seção 1: Começar"><span class="step-number">1</span><span class="step-name">Começar</span></a></li><li><a href="#passos" data-step-link aria-label="Seção 2: Configurar"><span class="step-number">2</span><span class="step-name">Configurar</span></a></li><li><a href="#trocar" data-step-link aria-label="Seção 3: Alternar"><span class="step-number">3</span><span class="step-name">Alternar</span></a></li><li><a href="#janelas" data-step-link aria-label="Seção 4: Janelas"><span class="step-number">4</span><span class="step-name">Janelas</span></a></li><li><a href="#checklist" data-step-link aria-label="Seção 5: Conferir"><span class="step-number">5</span><span class="step-name">Conferir</span></a></li><li><a href="#problemas" data-step-link aria-label="Seção 6: Ajuda"><span class="step-number">6</span><span class="step-name">Ajuda</span></a></li></ol></nav>
+    <div class="panels" tabindex="0" role="region" aria-label="Conteúdo da seção"><section class="panel" id="inicio" aria-labelledby="inicio-title"><div class="panel-heading"><p class="eyebrow">Minecraft Java · Multitarefa</p><h1 id="inicio-title" tabindex="-1">Seu jogo.<br><span>Seu ritmo.</span></h1><p class="intro">Consulte o ChatGPT enquanto acompanha o Minecraft. Vamos configurar o jogo e testar a troca de janelas.</p></div>
 <div class="shortcut"><kbd>F3</kbd><span>+</span><kbd>P</kbd><span class="shortcut-divider" aria-hidden="true"></span><kbd>Alt</kbd><span>+</span><kbd>Tab</kbd></div>
 <div class="note"><span class="note-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span><div><strong>Um aplicativo em foco por vez.</strong><p>O teclado e o mouse controlam a janela selecionada. Este guia é para Minecraft Java.</p></div></div></section>
 <section class="panel" id="passos" aria-labelledby="passos-title"><div class="panel-heading"><p class="eyebrow">01 · Pausa ao perder foco</p><h1 id="passos-title" tabindex="-1">Troque de janela.<br><span>Sem abrir o menu.</span></h1><p class="intro">Entre no mundo e, com o jogo em foco, segure F3 e pressione P.</p></div>
@@ -38,9 +44,9 @@
 <section class="panel" id="problemas" aria-labelledby="problemas-title"><div class="panel-heading"><p class="eyebrow">05 · Se precisar de ajuda</p><h1 id="problemas-title" tabindex="-1">Ajustes pequenos.<br><span>Jogo tranquilo.</span></h1><p class="intro">Abra a dúvida que combina com o seu teste.</p></div>
 <div class="faq"><details><summary>O Game Menu continua aparecendo</summary><p>Confira se <kbd>F3</kbd> + <kbd>P</kbd> mostra <code>disabled</code>. Feche o menu com <kbd>Esc</kbd> antes de alternar.</p></details><details><summary>F3 + P não funciona no notebook</summary><p>Tente <kbd>Fn</kbd> + <kbd>F3</kbd> + <kbd>P</kbd>. As teclas de função podem estar configuradas para brilho ou volume.</p></details><details><summary>O jogo minimiza ao trocar de janela</summary><p>Use o modo janela. Desativar a pausa não altera o comportamento da tela cheia exclusiva.</p></details><details><summary>Posso andar enquanto digito no ChatGPT?</summary><p>Esse atalho não mantém o controle do personagem sem foco. O teclado controla o aplicativo selecionado.</p></details><details><summary>Funciona no Minecraft Bedrock?</summary><p>Este guia usa atalhos do Minecraft Java. No Bedrock, as configurações são diferentes.</p></details></div></section></div>
     <nav class="journey-controls" aria-label="Navegação entre seções">
-      <a class="button secondary" href="../../" data-previous>← Início</a>
+      <a class="button secondary" href="../../" data-previous><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 12H4m6-6-6 6 6 6"/></svg><span>Início</span></a>
       <p class="step-counter" data-step-counter>Uma seção por vez</p>
-      <a class="button primary" href="#passos" data-next data-end-href="../../#conectar" data-end-label="Conectar ao servidor">Próxima seção <span aria-hidden="true">→</span></a>
+      <a class="button primary" href="#passos" data-next data-end-href="../../#conectar" data-end-label="Conectar"><span>Próxima</span><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6"/></svg></a>
     </nav>
     <p class="sr-only" role="status" aria-live="polite" data-step-status></p>
     <noscript><p class="quiet-note">Use os números no topo para ir até cada seção.</p></noscript>

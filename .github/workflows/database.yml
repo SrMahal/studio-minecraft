@@ -1,0 +1,53 @@
+name: StudioCraft database
+
+on:
+  pull_request:
+    paths:
+      - 'database/**'
+      - 'config/**'
+      - 'tests/**'
+      - '.github/workflows/database.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'database/**'
+      - 'config/**'
+      - 'tests/**'
+      - '.github/workflows/database.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  mysql84:
+    runs-on: ubuntu-24.04
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          MYSQL_ROOT_PASSWORD: disposable-test-password
+          MYSQL_ROOT_HOST: '%'
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h localhost -pdisposable-test-password"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=12
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install test clients
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y default-mysql-client php-cli
+      - name: Static migration contract
+        run: python3 tests/test_schema_contract.py
+      - name: PHP connection syntax
+        run: php -l config/database.php
+      - name: MySQL schema invariants
+        env:
+          TEST_MYSQL_HOST: 127.0.0.1
+          TEST_MYSQL_PORT: '3306'
+          TEST_MYSQL_USER: root
+          TEST_MYSQL_PASSWORD: disposable-test-password
+        run: python3 tests/test_database.py

@@ -1,6 +1,19 @@
 # Studio Minecraft · Servidor Mahal
 
-Website estático em HTML, CSS e JavaScript para conexão, instalação de mods e ajuda do Servidor Mahal.
+Website em HTML, CSS e JavaScript para conexão, instalação de mods e ajuda do Servidor Mahal, com fundação de banco StudioCraft para a infraestrutura Threeebs.
+
+## Banco StudioCraft
+
+O banco do projeto recebe migrations em `database/migrations/`, fora de `public/`,
+e usa a conexão PDO `config/database.php` com as variáveis fornecidas pela Threeebs.
+Esta primeira etapa cria jogadores vinculados por UUID ao parceiro Threeebs e
+credenciais exclusivas para o jogo. Nick, e-mail e vínculo de conta são únicos;
+as contas nascem pendentes. A senha principal da Threeebs não é copiada.
+
+Veja [schema e aplicação pela plataforma](database/README.md) e
+[contrato da integração seguinte](docs/THREEEBS_INTEGRATION.md).
+O website continua estático nesta entrega: login, consulta de parceiro, envio de
+e-mail e autenticação no Minecraft serão implementados nas próximas etapas.
 
 ## Navegação
 
@@ -44,3 +57,4 @@ python3 -m http.server 8080 --directory public
 Abra `http://localhost:8080`. A hospedagem deve apontar sua raiz para `public/`.
 
 A versão e os endereços apresentados são configurações editoriais do servidor, não uma consulta de disponibilidade em tempo real. O tutorial F3 + P é específico do Minecraft Java e não altera o jogo automaticamente.
+

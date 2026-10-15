@@ -237,3 +237,19 @@ kbd{display:inline-block;color:var(--3eb-text-primary);border:1px solid var(--3e
 :root[data-motion="reduced"] *,:root[data-motion="reduced"] :before,:root[data-motion="reduced"] :after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 :root[data-motion="reduced"] a:active,:root[data-motion="reduced"] button:active{transform:none}
 @media(forced-colors:active){.button,.preference-button,.step-number,.checklist input{border:1px solid ButtonText}:focus-visible{outline-color:Highlight}}
+
+/* Configurações agrupadas: mantém os controles originais e o estado persistido. */
+.settings-menu{position:relative;margin-left:auto;flex:none;z-index:30}
+.settings-trigger{gap:9px;white-space:nowrap}
+.settings-trigger[aria-expanded="true"]{border-color:var(--accent-text);color:var(--accent-text);background:var(--3eb-bg-subtle)}
+.settings-chevron{font-size:.85em;transition:transform 160ms}
+.settings-menu.is-open .settings-chevron{transform:rotate(180deg)}
+.settings-panel{position:absolute;right:0;top:calc(100% + 10px);width:min(360px,calc(100vw - 32px));padding:16px;display:flex;flex-direction:column;align-items:stretch;gap:12px;background:var(--3eb-bg-surface);color:var(--3eb-text-primary);border:1px solid var(--3eb-border-strong);border-radius:var(--3eb-radius-sm);box-shadow:var(--3eb-shadow-sm);z-index:40}
+.settings-panel .text-size-controls{justify-content:space-between;flex-wrap:nowrap}
+.settings-panel .preference-label{position:static;width:auto;height:auto;clip-path:none;white-space:normal;overflow:visible;margin-right:auto;font-size:.8rem}
+.settings-panel .preference-button{min-height:44px;min-width:44px}
+.settings-panel>[data-theme-toggle],.settings-panel>[data-motion-toggle]{justify-content:flex-start;width:100%;min-height:48px;padding:10px 14px}
+.settings-panel [data-theme-label],.settings-panel [data-motion-label]{position:static;width:auto;height:auto;clip-path:none;white-space:normal;overflow:visible}
+@media(max-width:1200px){.settings-menu{grid-column:2;grid-row:1;margin-left:0}.settings-panel{grid-column:auto}}
+@media(max-width:600px){.settings-menu{width:100%;margin-left:0}.settings-trigger{width:100%;justify-content:center}.settings-panel{right:0;left:auto;width:100%}.settings-panel .text-size-controls{justify-content:space-between}.settings-panel .preference-label{margin-right:6px}}
+@media(prefers-reduced-motion:reduce){.settings-chevron{transition:none}}

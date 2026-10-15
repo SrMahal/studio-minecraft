@@ -1,6 +1,6 @@
 /* Studio Minecraft — local Threeebs palette with high-contrast reading colors. */
 *,:before,:after{box-sizing:border-box}
-:root{--reading-base:clamp(20px,1.25vw,24px);--reading-scale:1;--accent-text:#82f5d9;--3eb-text-muted:#a9bdb7;--3eb-border-subtle:#536960;--3eb-border-strong:#79978c}
+:root{--reading-base:clamp(16px,1vw,19px);--reading-scale:1;--accent-text:#82f5d9;--3eb-text-muted:#a9bdb7;--3eb-border-subtle:#536960;--3eb-border-strong:#79978c}
 :root[data-theme="light"]{--accent-text:#08634f;--3eb-text-muted:#465e56;--3eb-action-primary:#08745b;--3eb-action-primary-hover:#055b47;--3eb-border-subtle:#7d978d;--3eb-border-strong:#526f63}
 :root[data-text-size="125"]{--reading-scale:1.25}
 :root[data-text-size="150"]{--reading-scale:1.5}
@@ -253,3 +253,24 @@ kbd{display:inline-block;color:var(--3eb-text-primary);border:1px solid var(--3e
 @media(max-width:1200px){.settings-menu{grid-column:2;grid-row:1;margin-left:0}.settings-panel{grid-column:auto}}
 @media(max-width:600px){.settings-menu{width:100%;margin-left:0}.settings-trigger{width:100%;justify-content:center}.settings-panel{right:0;left:auto;width:100%}.settings-panel .text-size-controls{justify-content:space-between}.settings-panel .preference-label{margin-right:6px}}
 @media(prefers-reduced-motion:reduce){.settings-chevron{transition:none}}
+
+/* Cabeçalho compartilhado: navegação e configurações à direita. */
+.site-header{justify-content:flex-start;column-gap:12px}
+.site-header .brand{margin-right:auto}
+.site-header .nav{margin-left:auto}
+.site-header .settings-menu{margin-left:0}
+@media(max-width:1200px){
+  .site-header{display:flex;align-items:center;flex-wrap:wrap}
+  .site-header .nav{margin-left:auto}
+  .site-header .settings-menu{grid-column:auto;grid-row:auto;margin-left:0}
+}
+@media(max-width:600px){
+  .site-header{display:flex;flex-wrap:wrap;align-items:center}
+  .site-header .brand{width:100%;margin-right:0}
+  .site-header .nav{width:auto;flex:1;min-width:0;margin-left:0;justify-content:flex-end;gap:2px}
+  .site-header .nav a{flex:0 1 auto;padding:8px 6px;font-size:.8rem}
+  .site-header .settings-menu{width:auto;flex:none}
+  .site-header .settings-trigger{width:auto;padding:8px;min-width:48px}
+  .site-header .settings-trigger>span:not(.settings-chevron){position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+  .site-header .settings-panel{width:min(320px,calc(100vw - 32px))}
+}

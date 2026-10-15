@@ -47,7 +47,24 @@
       savePreferences();
     }));
     reducedMotion.addEventListener('change', updatePreferences);
-    preferences.hidden = false;
+    const menu = document.querySelector('[data-settings-menu]');
+    const trigger = menu?.querySelector('[data-settings-trigger]');
+    const setMenuOpen = open => {
+      preferences.hidden = !open;
+      trigger.setAttribute('aria-expanded', String(open));
+      trigger.setAttribute('aria-label', open ? 'Fechar configurações' : 'Abrir configurações');
+      menu.classList.toggle('is-open', open);
+    };
+    trigger?.addEventListener('click', () => setMenuOpen(preferences.hidden));
+    document.addEventListener('pointerdown', event => {
+      if (!preferences.hidden && !menu.contains(event.target)) setMenuOpen(false);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape' && !preferences.hidden) {
+        setMenuOpen(false);
+        trigger.focus();
+      }
+    });
     updatePreferences();
   }
 

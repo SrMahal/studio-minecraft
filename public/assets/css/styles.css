@@ -274,3 +274,8 @@ kbd{display:inline-block;color:var(--3eb-text-primary);border:1px solid var(--3e
   .site-header .settings-trigger>span:not(.settings-chevron){position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
   .site-header .settings-panel{width:min(320px,calc(100vw - 32px))}
 }
+
+/* Fluxo guiado em cinco passos, com escolhas amplas e acessíveis. */
+.onboarding-choices{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.onboarding-choices .button{flex:0 1 auto}
+@media(max-width:640px){.onboarding-choices{flex-direction:column;align-items:stretch}.onboarding-choices .button{width:100%}.step-nav ol{gap:5px}.step-nav a{gap:5px}.step-number{width:34px;height:34px}.step-name{font-size:.75em}}
